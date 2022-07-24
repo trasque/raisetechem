@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>化学物質法規制案内</title>
+    </head>
+    <body>
+        <h2>化学物質法規制案内</h2>
+        <p>調べたい化学物質のID番号をクリックしてください</p>
+        <th:block th:each="material : ${materials}">
+            <p>
+                <span th:text="${material.id}"></span>
+                <span th:text="${material.iupacName}"></span>
+            </p>
+        </th:block>
+    </body>
+</html>
